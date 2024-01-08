@@ -1,0 +1,44 @@
+<div class="bg-gray-100 mt-4 md:mx-80 md:mt-10 px-4 py-6 shadow-lg drop-shadow-lg">
+    <p class="text-center text-2xl text-semibold">Edit Blog</p>
+    <form [formGroup]="BlogForm">
+        <div class="mb-2">
+            <mat-label class="text-sm">Title</mat-label>
+            <mat-form-field appearance="outline" class="w-full">
+                <input formControlName="title" matInput placeholder="Enter title" maxlength="50" />
+            </mat-form-field>
+        </div>
+        <div class="md:flex mb-2 justify-between">
+            <div> <mat-label class="text-sm">First Name</mat-label>
+                <mat-form-field appearance="outline" class="w-full">
+                    <input formControlName="firstName" matInput placeholder="Enter first name" maxlength="50" />
+                </mat-form-field>
+            </div>
+            <div> <mat-label class="text-sm">Last Name</mat-label>
+                <mat-form-field appearance="outline" class="w-full">
+                    <input formControlName="lastName" matInput placeholder="Enter last name" maxlength="50" />
+                </mat-form-field>
+            </div>
+
+        </div>
+
+        <div class="md:flex mb-2 justify-between">
+            <div> <mat-label class="text-sm">Gender</mat-label>
+                <mat-form-field appearance="outline" class="w-full">
+                    <input formControlName="gender" matInput placeholder="Enter gender" maxlength="50" />
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-label class="text-sm">Email</mat-label>
+                <mat-form-field appearance="outline" class="w-full">
+                    <input formControlName="email" matInput placeholder="Enter email" maxlength="50" />
+                </mat-form-field>
+            </div>
+
+        </div>
+
+        <button class="w-full btn text-sm font-medium mt-2" type="submit" mat-flat-button color="primary"
+            [disabled]="!BlogForm.valid" (click)="submitBlogForm()">
+            Submit
+        </button>
+    </form>
+</div>
